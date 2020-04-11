@@ -1,5 +1,6 @@
 {
   "name": "hci-frontend",
+  "homepage":"https://ktzktv.github.io/flashcards",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -19,7 +20,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
- "eslintConfig": {
+  "eslintConfig": {
     "extends": "react-app"
   },
   "browserslist": {

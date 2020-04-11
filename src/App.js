@@ -43,7 +43,7 @@ class App extends React.Component {
                         {(e) => { e.preventDefault(); if(e.target[0].value.toLowerCase() == this.state.card[this.state.index].back.toLowerCase()) 
                                 {this.setState({index:(this.state.index+1)%3, answer:"", placeholder:"Answer", flip:true})} 
                                 else { this.setState({answer:"", placeholder:"Incorrect"}) } } }>
-                <input type="text" value={this.state.answer} onChange={(e) => this.setState({answer:e.target.value})} placeholder={this.state.placeholder} />
+                <input class="inputfield" type="text" value={this.state.answer} onChange={(e) => this.setState({answer:e.target.value})} placeholder={this.state.placeholder} />
                  </form> </div>
        <p /><p /><p /><p /><p /><Button onClick={() => this.setState({render: "word", history:[...this.state.history, "study"]})}>Add more cards to deck</Button>
     <p /> <Button onClick={() => this.setState({render:"select", history:[...this.state.history, "study"]})}>Study another deck</Button>
@@ -84,7 +84,7 @@ class App extends React.Component {
                                 if(this.state.side=="Front") { this.setState({side:"Back"})}
                                 else { if(this.state.front==""||this.state.back=="") {this.setState({side:"Front"})} else { this.setState({side:"Front", front:"", back:""}); alert("pretend the card has been added to the selected deck; actually adding the card is not implemented yet")}}} }
         width="300px">
-                <input type="text" value={this.state.side =="Front"? this.state.front : this.state.back }
+                <input class="inputfield" type="text" value={this.state.side =="Front"? this.state.front : this.state.back }
                                    onChange={(e) => { e.preventDefault();
                                                      if(this.state.side=="Front") {this.setState({front:e.target.value})} 
                                                     else {this.setState({back:e.target.value})} }}

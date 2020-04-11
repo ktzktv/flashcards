@@ -4,7 +4,7 @@
 
 .scroll {
 width: 150px; 
-height: 150px; 
+height: 350px; 
 overflow-x: hidden; 
 overflow-y: auto;
 text-align: center; 
@@ -20,6 +20,10 @@ padding: 20px;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.inputfield{
+  width: 80%;
 }
 
 .StudyCard {
