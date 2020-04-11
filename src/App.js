@@ -91,7 +91,7 @@ class App extends React.Component {
                 placeholder={this.state.side + " of Card"} />
         </form></div>
         <p /><p />
-        <div> <Button onClick={() => this.setState({render: "select", history:[...this.state.history, "word"]})}>Study another Topic</Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<Button onClick={() => { this.setState({render: "study", history:[...this.state.history, "word"]}); alert("The only available deck is french. Pretend as though these were the cards you entered.")}}>Study this Deck</Button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div> <Button onClick={() => this.setState({render: "select", history:[...this.state.history, "word"]})}>Study another Topic</Button><p></p><Button onClick={() => { this.setState({render: "study", history:[...this.state.history, "word"]}); alert("The only available deck is french. Pretend as though these were the cards you entered.")}}>Study this Deck</Button><p />
               <Button onClick={() => this.setState({render: "deck", history:[...this.state.history, "word"]})}>Make another Deck</Button> </div>
         <p /><p />{this.backButton()}
         </>
