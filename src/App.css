@@ -1,0 +1,70 @@
+.App {
+  text-align: center;
+}
+
+.scroll {
+width: 150px; 
+height: 150px; 
+overflow-x: hidden; 
+overflow-y: auto;
+text-align: center; 
+padding: 20px;
+}
+
+.App-header {
+  background-color: #282c23;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.StudyCard {
+  border-radius : 25px;
+  padding-top : 10px;
+  width : 350px;
+  height : 150px;
+  background-color : #ffffff;
+  color : #4784c2;
+}
+
+.sentence {
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.translation {
+  padding-top: 30px;
+  padding-bottom: 5px;
+  color : #7a7575;
+  font-size : 20px;
+}
+
+.definition {
+  padding-top: 10px;
+  font-size : 22px;
+  color: #80732b;
+}
+
+
+.answer {
+  font-size : 30px;
+  text-align : center;
+  width: 380px;
+}
+
+.newWord {
+  font-size : 20px;
+  width : 350px;
+  text-align : left;
+}
+
+.welcomeScreen {
+  color : #000000;
+  font-size : 30px;
+  text-align : center;
+}
