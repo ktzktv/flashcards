@@ -8,7 +8,7 @@ import './App.css';
 class App extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {render:"select", side:"Front", front:"", back:"", deck:"", card:[{front:"Est-ce que ____etes prets?", back:"vous"}, {front:"il ____que j'y aille", back:"faut"}, {front:"il est ____et sauf", back:"sain"}], index:0, answer:"", placeholder:"Answer", history:[], flip:true} 
+        this.state = {render:"select", side:"Front", front:"", back:"", deck:"", card:[{front:"Est-ce que ____etes prets? \n definition: you", back:"vous"}, {front:"il ____que j'y aille \n definition: need, have to", back:"faut"}, {front:"il est ____et sauf \n definition: healthy", back:"sain"}], index:0, answer:"", placeholder:"Answer", history:[], flip:true} 
     }
     
     render() {
