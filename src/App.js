@@ -1,14 +1,12 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button'
 import ButtonGroup from 'react-bootstrap/ButtonGroup'
-import DropdownButton from 'react-bootstrap/DropdownButton'
-import Dropdown from 'react-bootstrap/Dropdown'
 import './App.css';
 
 class App extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {render:"select", side:"Front", front:"", back:"", deck:"", card:[{front:"Est-ce que ____etes prets? \n definition: you", back:"vous"}, {front:"il ____que j'y aille \n definition: need, have to", back:"faut"}, {front:"il est ____et sauf \n definition: healthy", back:"sain"}], index:0, answer:"", placeholder:"Answer", history:[], flip:true} 
+        this.state = {render:"select", side:"Front", front:"", back:"", deck:"", card:[{front:"Est-ce que ____etes prets?", front2:"definition: you",back:"vous"}, {front:"il ____que j'y aille", front2: "definition: have to", back:"faut"}, {front:"il est ____et sauf", front2: "definition: healthy", back:"sain"}], index:0, answer:"", placeholder:"Answer", history:[], flip:true} 
     }
     
     render() {
@@ -27,15 +25,6 @@ class App extends React.Component {
         }    
     }
 
-
-
-
-
-
-
-
-
-
     renderStudy() { return <> <div className="StudyCard">
         <Button variant="dark" onClick={(e) => this.setState({flip:!this.state.flip})}>Flip Card?</Button>
         {this.flipCard()}
@@ -51,14 +40,6 @@ class App extends React.Component {
     </>
     }
 
-
-
-
-
-
-
-
-
     renderDeck() { return <>
         <p>Make a new Deck</p>
         <h3>Enter the title of your Deck</h3>
@@ -68,11 +49,6 @@ class App extends React.Component {
         <p /><p />{this.backButton()}
         </>    
     }
-
-
-
-
-
 
     renderWord() { return  <>
         <p>Add a Card to {this.state.deck}</p>
@@ -89,19 +65,13 @@ class App extends React.Component {
                                                      if(this.state.side=="Front") {this.setState({front:e.target.value})} 
                                                     else {this.setState({back:e.target.value})} }}
                 placeholder={this.state.side + " of Card"} />
-        </form></div>
+        </form><p/></div>
         <p /><p />
         <div> <Button onClick={() => this.setState({render: "select", history:[...this.state.history, "word"]})}>Study another Topic</Button><p></p><Button onClick={() => { this.setState({render: "study", history:[...this.state.history, "word"]}); alert("The only available deck is french. Pretend as though these were the cards you entered.")}}>Study this Deck</Button><p />
               <Button onClick={() => this.setState({render: "deck", history:[...this.state.history, "word"]})}>Make another Deck</Button> </div>
         <p /><p />{this.backButton()}
         </>
     }
-
-
-
-
-
-
 
     renderSelect(){ 
         return <>
@@ -136,7 +106,7 @@ class App extends React.Component {
     }
 
     flipCard() {
-        if (this.state.flip) { return <p> {this.state.card[this.state.index].front} </p>} 
+        if (this.state.flip) { return <><p> {this.state.card[this.state.index].front} </p> <p> {this.state.card[this.state.index].front2} </p></>} 
         else { return <p> {this.state.card[this.state.index].back} </p>}
     }
 }
